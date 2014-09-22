@@ -17,10 +17,10 @@ Inclua o script `realtime-cli.js` em sua aplicação. O script está localizado 
 Crie nova instância do Realtime Client, passando sua Application Key e Authentication Token.
 
 ```javascript 
- rtCli = new RTCli({
-  app_key     : "your_app_key",
+rtCli = new RTCli({
+	app_key     : "your_app_key",
   auth_token  : "your_auth_token"
- });
+});
 ```
 
 O método `connect(client)` é responsavel com fazer a autenticação e fazer as devidas configurações do seu cliente Realtime. Seu callback retorna um novo OrtcClient.
@@ -28,9 +28,9 @@ O método `connect(client)` é responsavel com fazer a autenticação e fazer as
 O objeto de `client` contem todos os metodos da classe OrtcClient, veja mais detalhes na [API de Referência] (http://framework.realtime.co/messaging/#javascript), veja o exemplo:
 
 ```javascript
-     rtCli.connect(function(client){
-				//do something with client
-     });
+rtCli.connect(function(client){
+	//do something with client
+});
 ```
 Veja o exemplo de utilização do Realtime Client, [exemplo](https://github.com/gmoura/real-time-cli/tree/master/example).
 

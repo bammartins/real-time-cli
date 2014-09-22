@@ -18,10 +18,10 @@ Depois crie nova instância do Realtime:
 
 ```javascript
 var 
-	rtCli = new RTCli({
-		app_key     : "your_app_key",
-	  auth_token  : "your_auth_token"
-	});
+ rtCli = new RTCli({
+  app_key     : "your_app_key",
+  auth_token  : "your_auth_token"
+ });
 ```
 
 ## Parâmetros

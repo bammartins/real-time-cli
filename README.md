@@ -1,6 +1,6 @@
 # iG Realtime Client  #
 
-Cliente de configuração e utilização do serviço do  Realtime Framework.
+Cliente de configuração e utilização do serviço do Realtime.
 
 ## Dependência 
 
@@ -12,16 +12,25 @@ Script [ORTC](http://dfdbz2tdq3k01.cloudfront.net/js/2.1.0/ortc.js)
 
 ## Utilização
 
-Inclua o script `realtime-cli.js` em sua aplicação. O script está localizado na pasta dest/.
+Inclua o script `realtime-cli.js` em sua aplicação. O script está localizado na pasta dist/.
 
-Depois crie nova instância do Realtime:
+Crie nova instância do Realtime Client, passando sua Application Key e Authentication Token.
 
-```javascript
-var 
+```javascript 
  rtCli = new RTCli({
   app_key     : "your_app_key",
   auth_token  : "your_auth_token"
  });
+```
+
+O método `connect(client)` é responsavel com fazer a autenticação e fazer as devidas configurações do seu cliente Realtime. Seu callback retorna um novo OrtcClient.
+
+O objeto de `client` contem todos os metodos da classe OrtcClient, veja mais detalhes na [API de Referência] (http://framework.realtime.co/messaging/#javascript), veja o exemplo:
+
+```javascript
+     rtCli.connect(function(client){
+				//do something with client
+     });
 ```
 
 ## Parâmetros
@@ -32,7 +41,11 @@ Sua Application Key
 
 ### auth_token - String - opcional 
 
-...
+## Método
+
+### connect(client)
+
+Configura seu Realtime Client e disponibiliza a partir do parâmetro `client` um novo OrtcClient.
 
 ## Documentação Realtime Framework
 

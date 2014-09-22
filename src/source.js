@@ -2,9 +2,9 @@ function RTCli () {
   "use strict";
 
   var 
-    APP_KEY     = arguments[0].app_key || "",
-    AUTH_TOKEN  = arguments[0].auth_token || "",
-    CLIENT 		  = null;
+    _app_key     = arguments[0].app_key || "",
+    _auth_token  = arguments[0].auth_token || "",
+    CLIENT 		   = null;
 
     return {
       init : function() {
@@ -19,7 +19,7 @@ function RTCli () {
             CLIENT.setHeartbeatActive(true);
             CLIENT.setHeartbeatFails(1);
             CLIENT.setHeartbeatTime(10);
-            CLIENT.connect(APP_KEY, AUTH_TOKEN);
+            CLIENT.connect(_app_key, _auth_token);
 
             if(client && typeof(client) === "function") {
               client(CLIENT);

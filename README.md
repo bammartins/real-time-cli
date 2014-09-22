@@ -32,6 +32,7 @@ O objeto de `client` contem todos os metodos da classe OrtcClient, veja mais det
 				//do something with client
      });
 ```
+Veja o exemplo de utilização do Realtime Client, [exemplo](https://github.com/gmoura/real-time-cli/tree/master/example).
 
 ## Parâmetros
 
@@ -40,6 +41,7 @@ O objeto de `client` contem todos os metodos da classe OrtcClient, veja mais det
 Sua Application Key
 
 ### auth_token - String - opcional 
+...
 
 ## Método
 

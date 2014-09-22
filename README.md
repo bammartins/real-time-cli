@@ -1,8 +1,6 @@
-# iG Real Time Client  #
+# iG Realtime Client  #
 
-Cliente de configuração e utilização do serviço do Real Time
-
-[realtime.co](http://www.realtime.co/)
+Cliente de configuração e utilização do serviço do  Realtime Framework.
 
 ## Dependência 
 
@@ -13,6 +11,10 @@ Script [ORTC](http://dfdbz2tdq3k01.cloudfront.net/js/2.1.0/ortc.js)
 ```
 
 ## Utilização
+
+Inclua o script `realtime-cli.js` em sua aplicação. O script está localizado na pasta dest/.
+
+Depois crie nova instância do Realtime:
 
 ```javascript
 var 
@@ -29,6 +31,15 @@ var
 Sua Application Key
 
 ### auth_token - String - opcional 
+
+...
+
+## Documentação Realtime Framework
+
+[JavaScript API Reference] (http://framework.realtime.co/messaging/#javascript)
+
+[Starting Guide] (http://framework.realtime.co/messaging/#starting)
+
 
 
 

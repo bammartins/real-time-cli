@@ -16,10 +16,10 @@ Script [ORTC](http://dfdbz2tdq3k01.cloudfront.net/js/2.1.0/ortc.js)
 
 ```javascript
 var 
-	rtCli = new RTCli({
-		app_key     : "your_app_key",
-	  auth_token  : "your_auth_token"
-	});
+ rtCli = new RTCli({
+  app_key     : "your_app_key",
+  auth_token  : "your_auth_token"
+ });
 ```
 
 ## Parâmetros

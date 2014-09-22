@@ -8,7 +8,7 @@ var
 
 	script = {
 		src : 'src/**/*.js',
-		dest : 'dest/'
+		dest : 'dist/'
 	};
 
 /**

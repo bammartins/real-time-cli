@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iG Real Time Client</title>
+</head>
+<body>
+  <script async type="text/javascript" src="http://dfdbz2tdq3k01.cloudfront.net/js/2.1.0/ortc.js"></script>
+	<script async src="../dest/realtime-cli.min.js"></script>
+	<script async>
+   window.onload = function start () {
+
+     var rtCli = new RTCli({
+      app_key     : "uFbXL6",
+      auth_token  : "auth_token"
+     });
+
+     rtCli.connect(function(client){
+
+      client.onConnected = function (theClient) {
+        theClient.subscribe('channel_a', true,
+          function (theClient, channel, msg) {
+            console.log("Received message:", msg);  
+            console.log(msg);
+          });
+
+          theClient.subscribe('ortcClientConnected', true, function (theClient, channel, msg) {
+            console.log(msg);
+          });
+          theClient.subscribe('ortcClientDisconnected', true, function (theClient, channel, msg) {
+            console.log(msg);
+          });
+          theClient.subscribe('ortcClientSubscribed',
+           true, function (theClient, channel, msg) {
+            console.log(msg);
+          });
+          theClient.subscribe('ortcClientUnsubscribed', true, function (theClient, channel, msg) {
+            console.log(msg);
+          });
+      };
+
+      client.onDisconnected = function() {
+        console.log("Disconnected");        
+      };
+
+      client.onReconnected = function() {
+        console.log("Reconnected");        
+      };
+      
+      client.onSubscribed = function (theClient, channel) {
+        console.log("Subscribed to channel: " + channel);        
+      };
+      
+      client.onException = function(theClient, exception) {
+        console.log("error: " + exception);        
+      };
+
+      client.onDisconnected = function(theClient) {
+        console.log("onDisconnected");        
+      };
+
+      client.onReconnecting = function (theClient) {
+        console.log("onReconnecting");        
+      };
+                
+      client.onReconnected = function (theClient) {
+        console.log("onReconnected");        
+      };
+
+     });
+   }
+  </script>
+</body>
+</html>

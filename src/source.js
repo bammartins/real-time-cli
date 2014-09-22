@@ -2,8 +2,8 @@ function RTCli () {
   "use strict";
 
   var 
-    APP_KEY     = arguments[0].app_key,
-    AUTH_TOKEN  = arguments[0].auth_token,
+    APP_KEY     = arguments[0].app_key || "",
+    AUTH_TOKEN  = arguments[0].auth_token || "",
     CLIENT 		  = null;
 
     return {

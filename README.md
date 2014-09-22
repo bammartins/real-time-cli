@@ -24,6 +24,10 @@ var
  });
 ```
 
+Veja o exemplo de utilização do client
+
+[Exemplo](https://github.com/gmoura/real-time-cli/tree/master/example)
+
 ## Parâmetros
 
 ### app_key - String - obrigatório

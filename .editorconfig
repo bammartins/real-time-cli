@@ -1,0 +1,17 @@
+# EditorConfig file
+root = true
+
+# JS space indentation
+[*.js]
+indent_style = space
+indent_size  = 2
+
+# JS space indentation
+[*.css]
+indent_style = space
+indent_size  = 2
+
+# JS space indentation
+[*.html]
+indent_style = space
+indent_size  = 2
